@@ -6,6 +6,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import "./main.css";
+import Navigation from './components/navigation';
+
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -13,9 +17,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
+        
+        
         <Links />
       </head>
       <body>
+        <Navigation />
         {children}
         <ScrollRestoration />
         <Scripts />
